@@ -25,7 +25,9 @@ namespace ManterClasseAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ClasseObjeto>>> GetClasseObjeto()
         {
-            return await _context.ClasseObjeto.ToListAsync();
+            var result = from obj in _context.ClasseObjeto select obj;
+            result = result.Where(x => x.Ativo == true);
+            return await result.ToListAsync();
         }
 
         // GET: api/ClasseObjetoes/5
@@ -56,6 +58,36 @@ namespace ManterClasseAPI.Controllers
 
             try
             {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ClasseObjetoExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}/status")]
+        public async Task<IActionResult> PutStatusClasseObjeto(int id, ClasseObjeto classeObjeto)
+        {
+            if (id != classeObjeto.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(classeObjeto).State = EntityState.Modified;
+
+            try
+            {
+                classeObjeto.Ativo = false;
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
