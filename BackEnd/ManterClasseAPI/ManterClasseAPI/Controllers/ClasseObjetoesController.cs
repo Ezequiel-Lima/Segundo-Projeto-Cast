@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ManterClasseAPI.Data;
 using ManterClasseAPI.Models;
+using Microsoft.Extensions.Logging;
+using Serilog.Core;
+using Serilog;
 
 namespace ManterClasseAPI.Controllers
 {
@@ -58,6 +61,7 @@ namespace ManterClasseAPI.Controllers
 
             try
             {
+                Log.Warning("Atualização: " + classeObjeto.Descricao);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -110,6 +114,7 @@ namespace ManterClasseAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<ClasseObjeto>> PostClasseObjeto(ClasseObjeto classeObjeto)
         {
+            Log.Warning("Inclusão: " + classeObjeto.Descricao);
             _context.ClasseObjeto.Add(classeObjeto);
             await _context.SaveChangesAsync();
 

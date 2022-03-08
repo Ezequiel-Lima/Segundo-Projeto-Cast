@@ -132,3 +132,17 @@ C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterC
 C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\obj\Debug\net5.0\ref\ManterClasseAPI.dll
 C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\obj\Debug\net5.0\ManterClasseAPI.pdb
 C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\obj\Debug\net5.0\ManterClasseAPI.genruntimeconfig.cache
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Microsoft.Azure.Services.AppAuthentication.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.AspNetCore.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
+C:\Users\joao.ezequiel\source\repos\ManterClasse\BackEnd\ManterClasseAPI\ManterClasseAPI\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
