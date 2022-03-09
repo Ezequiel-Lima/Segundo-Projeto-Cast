@@ -57,6 +57,9 @@ namespace ManterClasseAPI.Controllers
                 return BadRequest();
             }
 
+            if (!ValidaDescricao(classeObjeto.Id, classeObjeto.Descricao))
+                return BadRequest("Classe do objeto já cadastrada");
+
             _context.Entry(classeObjeto).State = EntityState.Modified;
 
             try
@@ -115,6 +118,10 @@ namespace ManterClasseAPI.Controllers
         public async Task<ActionResult<ClasseObjeto>> PostClasseObjeto(ClasseObjeto classeObjeto)
         {
             Log.Warning("Inclusão: " + classeObjeto.Descricao);
+
+            if (!ValidaDescricao(classeObjeto.Id, classeObjeto.Descricao))
+                return BadRequest("Classe do objeto já cadastrada");
+
             _context.ClasseObjeto.Add(classeObjeto);
             await _context.SaveChangesAsync();
 
@@ -135,6 +142,18 @@ namespace ManterClasseAPI.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        private bool ValidaDescricao(int id, string descricao)
+        {
+            var result = from obj in _context.ClasseObjeto select obj;
+
+            result = result.Where(x => x.Descricao == descricao).Where(x => x.Id != id);
+
+            if (!result.Any())
+                return true;
+
+            return false;
         }
 
         private bool ClasseObjetoExists(int id)
