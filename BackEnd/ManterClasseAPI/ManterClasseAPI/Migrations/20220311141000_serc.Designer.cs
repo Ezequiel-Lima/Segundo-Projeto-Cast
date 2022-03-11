@@ -3,14 +3,16 @@ using ManterClasseAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ManterClasseAPI.Migrations
 {
     [DbContext(typeof(ManterClasseAPIContext))]
-    partial class ManterClasseAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20220311141000_serc")]
+    partial class serc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

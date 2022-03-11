@@ -10,6 +10,7 @@ using ManterClasseAPI.Models;
 using Microsoft.Extensions.Logging;
 using Serilog.Core;
 using Serilog;
+using System.Net;
 
 namespace ManterClasseAPI.Controllers
 {
@@ -115,12 +116,16 @@ namespace ManterClasseAPI.Controllers
         // POST: api/ClasseObjetoes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ClasseObjeto>> PostClasseObjeto(ClasseObjeto classeObjeto)
         {
-            Log.Warning("Inclusão: " + classeObjeto.Descricao);
+            if (string.IsNullOrEmpty(classeObjeto.Descricao))
+                return BadRequest("Descrição não preenchido");
 
             if (!ValidaDescricao(classeObjeto.Id, classeObjeto.Descricao))
                 return BadRequest("Classe do objeto já cadastrada");
+
+            Log.Warning("Inclusão: " + classeObjeto.Descricao);
 
             _context.ClasseObjeto.Add(classeObjeto);
             await _context.SaveChangesAsync();
