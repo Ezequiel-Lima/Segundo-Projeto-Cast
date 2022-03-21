@@ -9,7 +9,6 @@ dist/
 tmp/
 app/**/*.js
 app/**/*.js.map
-ManterClasseAPI\appsettings.json
 
 # dependencies
 node_modules/
@@ -603,3 +602,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,angular,visualstudio,visualstudiocode,dotnetcore,aspnetcore
+
+ManterClasseAPI/appsettings.json
+project.appsettings.json
