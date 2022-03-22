@@ -604,5 +604,6 @@ FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,angular,visualstudio,visualstudiocode,dotnetcore,aspnetcore
 
-ManterClasseAPI/appsettings.json
-project.appsettings.json
+# ManterClasseAPI/ManterClasseAPI/appsettings.json
+
+
